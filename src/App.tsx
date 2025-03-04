@@ -1,29 +1,29 @@
-// import Button from "./Button";
-// import Man from "/man.jpg";
-
 import { useState } from "react";
 
 function App() {
-  // let num = 1;
-  const [num, setNum] = useState(1);
+  const [num, setNum] = useState<number>(1);
 
-  const clickedBtn = () => {
+  const increment = () => {
     setNum(num + 1);
-    console.log("button clicked");
+    console.log(num);
+  };
+
+  const decrement = () => {
+    setNum(num - 1);
     console.log(num);
   };
 
   return (
-    <>
-      <h1 className="">Hello World</h1>
-      <h1>{num}</h1>
-      <button onClick={clickedBtn}>Click</button>
+    <main className="flex justify-center flex-col items-center h-screen">
+      <h1 className="text-4xl">{num}</h1>
+      <button className="bg-blue-500 p-3 text-white" onClick={increment}>
+        +
+      </button>
 
-      {/* <Button btnText="Click Me" color="white" bg="blue" click={clickedBtn} />
-      <Button btnText="Sign Up" color="white" bg="green" /> */}
-    </>
-
-    // <></> - React Fragment
+      <button className="bg-blue-500 p-3 text-white" onClick={decrement}>
+        -
+      </button>
+    </main>
   );
 }
 

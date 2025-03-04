@@ -1,17 +1,17 @@
 interface ButtonProps {
-  btnText: string;
-  color: string;
-  bg: string;
-  click?: () => void;
+  text: string;
+  color?: string;
 }
 
 function Button(props: ButtonProps) {
   return (
     <button
-      style={{ color: props.color, backgroundColor: props.bg }}
-      onClick={props.click}
+      style={{
+        backgroundColor: props.color,
+      }}
+      className={`text-white font-bold py-2 px-4 rounded`}
     >
-      {props.btnText}
+      {props.text}
     </button>
   );
 }
