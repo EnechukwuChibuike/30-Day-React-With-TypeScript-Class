@@ -46,7 +46,9 @@ export default function Counter() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-center h-screen">
+    <main
+      className={`flex flex-col items-center justify-center h-screen ${state.theme} === "light" ?  "bg-white" : "bg-black"`}
+    >
       <h1 className="text-5xl">{state.count}</h1>
 
       <section className="flex gap-3">
