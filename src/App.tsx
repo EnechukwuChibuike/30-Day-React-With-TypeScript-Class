@@ -4,22 +4,17 @@ function App() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <main
-      className={`flex h-screen ${theme === "light" ? "bg-white" : "bg-black"}`}
-    >
-      <header
-        className={`flex justify-between items-center h-[10vh] w-full shadow-lg px-10 ${
-          theme === "light" ? "text-black" : "text-white"
-        }}`}
-      >
+    <main className={`${theme === "light" ? "bg-white" : "bg-black"} h-screen`}>
+      <header className="flex justify-between items-center p-4 h-[10vh] shadow-2xl">
         <strong className={theme === "light" ? "text-black" : "text-white"}>
-          Logo
+          Logo.
         </strong>
+
         <button
-          className="bg-blue-700 text-white px-3 py-2 hover:brightness-75"
           onClick={toggleTheme}
+          className={`px-2 py-3 bg-blue-600 hover:brightness-75 text-white`}
         >
-          {theme}
+          {theme} mode
         </button>
       </header>
     </main>
