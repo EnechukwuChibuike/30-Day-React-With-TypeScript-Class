@@ -51,7 +51,13 @@ export default function Counter() {
         state.theme === "light" ? "bg-white" : "bg-black"
       }`}
     >
-      <h1 className="text-5xl">{state.count}</h1>
+      <h1
+        className={`text-5xl ${
+          state.theme === "light" ? "text-white" : "text-black"
+        }`}
+      >
+        {state.count}
+      </h1>
 
       <section className="flex gap-3">
         <button className="p-3 bg-blue-600 text-white" onClick={increaseCount}>
