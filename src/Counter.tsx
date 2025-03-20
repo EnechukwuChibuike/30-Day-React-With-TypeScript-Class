@@ -53,7 +53,7 @@ export default function Counter() {
     >
       <h1
         className={`text-5xl ${
-          state.theme === "light" ? "text-white" : "text-black"
+          state.theme === "light" ? "text-black" : "text-white"
         }`}
       >
         {state.count}
